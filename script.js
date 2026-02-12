@@ -43,7 +43,7 @@ form.addEventListener("submit", function (e) {
 function showLoveMessage(name) {
   loveButtons.classList.add("hidden");
   responseSection.classList.remove("hidden");
-  responseMessage.textContent = `${name}, you just made me the happiest person alive! 💖✨`;
+  responseMessage.textContent = `${name}, you've always made me the happiest person alive! I love you Plumy 💖✨`;
 
   startRoses();
 }
