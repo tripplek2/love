@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff4e88, #ff9ecf);
+  overflow: hidden;
+  color: white;
+}
+
+/* Background effects */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.stars,
+.sparkles {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  animation: moveBackground 60s linear infinite;
+  opacity: 0.2;
+}
+
+.stars {
+  background-image: radial-gradient( red 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.sparkles {
+  background-image: radial-gradient( blue 2px, transparent 2px);
+  background-size: 100px 100px;
+  animation-duration: 120s;
+}
+
+@keyframes moveBackground {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-500px, -500px);
+  }
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 100px;
+  border-radius: 25px;
+  text-align: center;
+  width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  margin: 5px;
+}
+
+/* Primary button */
+.primary {
+  background: #ff2e63;
+  color: white;
+}
+
+.primary:hover {
+  background: #ff004c;
+  transform: scale(1.05);
+}
+
+/* Secondary button */
+.secondary {
+  background: #ffffff;
+  color: #ff2e63;
+}
+
+.secondary:hover {
+  background: #ffe6f0;
+  transform: scale(1.05);
+}
+
+/* No button */
+.no {
+  background: #333;
+  color: white;
+}
+
+.no:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+/* Music button */
+.music-control {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  color: #ff2e63;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.music-control:hover {
+  background: #ffe6f0;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* Response section */
+#response {
+  margin-top: 20px;
+}
+
+#response h2 {
+  margin-bottom: 10px;
+}
+
+#responseMessage {
+  font-size: 16px;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 4s linear forwards;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}

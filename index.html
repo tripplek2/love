@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My Valentine 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+    <div class="stars"></div>
+    <div class="sparkles"></div>
+  </div>
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="Audio/mpeg">
+  </audio>
+  <button id="musicBtn" class="music-control">Play 🎵</button>
+
+  <main class="card">
+    <h1>💘 Will You Be My Valentine? 💘</h1>
+    <p class="subtitle">Enter your name to make it official ✨</p>
+    <form id="valentineForm">
+      <input type="text" id="nameInput" placeholder="Your Name" required>
+      <button type="submit" class="primary">Submit 💕</button>
+    </form>
+    <div class="buttons hidden" id="loveButtons">
+      <button id="yesBtn" class="primary">Yes 💖</button>
+      <button id="ofCourseBtn" class="secondary">Of course 💖</button>
+      <button id="noBtn" class="no">No 😅</button>
+    </div>
+    <section id="response" class="hidden">
+      <h2>Yay! 🥰💖</h2>
+      <p id="responseMessage"></p>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
