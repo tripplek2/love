@@ -169,12 +169,12 @@ button {
   font-size: 16px;
 }
 
-/* Floating Hearts */
-.heart {
+/* Floating Roses */
+.rose {
   position: fixed;
-  bottom: -20px;
+  bottom: -30px;
   font-size: 20px;
-  animation: floatUp 4s linear forwards;
+  animation: floatUp 5s linear forwards;
   pointer-events: none;
   z-index: 1000;
 }

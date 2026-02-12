@@ -45,7 +45,7 @@ function showLoveMessage(name) {
   responseSection.classList.remove("hidden");
   responseMessage.textContent = `${name}, you just made me the happiest person alive! 💖✨`;
 
-  startHearts();
+  startRoses();
 }
 
 yesBtn.addEventListener("click", function () {
@@ -68,20 +68,20 @@ noBtn.addEventListener("mouseover", function () {
   noBtn.style.top = y + "px";
 });
 
-// ===== FLOATING HEARTS =====
-function startHearts() {
+// ===== FLOATING ROSES =====
+function startRoses() {
   setInterval(() => {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.textContent = "💖";
+    const rose = document.createElement("div");
+    rose.classList.add("rose");
+    rose.textContent = "🌹"; // red rose emoji
 
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    rose.style.left = Math.random() * window.innerWidth + "px";
+    rose.style.fontSize = Math.random() * 20 + 20 + "px";
 
-    document.body.appendChild(heart);
+    document.body.appendChild(rose);
 
     setTimeout(() => {
-      heart.remove();
-    }, 4000);
-  }, 300);
+      rose.remove();
+    }, 5000);
+  }, 400); // new rose every 0.4 seconds
 }
